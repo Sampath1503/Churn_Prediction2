@@ -4,6 +4,25 @@ import numpy as np
 import joblib
 
 # ---------------------------------
+# Custom Styling (Optional)
+# ---------------------------------
+st.markdown("""
+    <style>
+    /* General button style */
+    .stButton>button {
+        background-color: #0078D7;
+        color: white;
+        border-radius: 10px;
+        font-size: 16px;
+        height: 3em;
+        width: 100%;
+    }
+    /* Title color */
+    .stApp header {visibility: hidden;}
+    </style>
+""", unsafe_allow_html=True)
+
+# ---------------------------------
 # Page Configuration
 # ---------------------------------
 st.set_page_config(
@@ -191,6 +210,9 @@ user_input['night.charge'] = st.sidebar.number_input("Night Charge", 0.0, 18.0, 
 st.sidebar.subheader("Customer Service")
 user_input['customer.calls'] = st.sidebar.slider("Customer Service Calls", 0, 10, 1)
 
+# --- Custom Threshold Slider (Optional) ---
+threshold = st.sidebar.slider("Churn Probability Threshold", 0.1, 0.9, 0.5, 0.05)
+
 # --- Prediction Button and Output ---
 st.divider()
 
@@ -198,20 +220,26 @@ if st.button("Predict Churn", type="primary", use_container_width=True):
     # Make prediction
     prediction, probability = make_prediction(user_input)
 
-    if prediction is not None:
-        churn_probability_percent = probability * 100
-        
-        # Display output
-        if prediction == 1: # 1 means 'yes' (Churn)
-            st.error(f"Prediction: **Customer WILL Churn**")
-            st.metric(label="Churn Probability", value=f"{churn_probability_percent:.2f}%")
-            st.warning("Action Recommended: Proactively engage this customer with retention offers.")
-        else: # 0 means 'no' (Not Churn)
-            st.success(f"Prediction: **Customer will NOT Churn**")
-            st.metric(label="Churn Probability", value=f"{churn_probability_percent:.2f}%")
-            st.info("Action Recommended: Monitor customer, but no immediate retention action needed.")
+    if probability is not None:
+        churn_label = 1 if probability >= threshold else 0
 
-        # Show a breakdown of the input data
-        with st.expander("Show Customer Input Summary"):
-            st.json(user_input)
+        if prediction is not None:
+            churn_probability_percent = probability * 100
 
+            # Display output
+            if churn_label == 1:  # 1 means 'yes' (Churn)
+                st.error("Prediction: **Customer WILL Churn**")
+                st.metric(label="Churn Probability", value=f"{churn_probability_percent:.2f}%")
+                st.warning("Action Recommended: Proactively engage this customer with retention offers.")
+            else:  # 0 means 'no' (Not Churn)
+                st.success("Prediction: **Customer will NOT Churn**")
+                st.metric(label="Churn Probability", value=f"{churn_probability_percent:.2f}%")
+                st.info("Action Recommended: Monitor customer, but no immediate retention action needed.")
+
+            # Save predictions for analysis
+            with open("predictions_log.csv", "a") as f:
+                f.write(f"{user_input}, Prediction: {churn_label}, Probability: {probability:.2f}\n")
+
+            # Show a breakdown of the input data
+            with st.expander("Show Customer Input Summary"):
+                st.json(user_input)
