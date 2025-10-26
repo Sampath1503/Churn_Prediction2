@@ -24,7 +24,7 @@ try:
     scaler = joblib.load("scaler.pkl")
     model = joblib.load("xgb_model.pkl")
 except FileNotFoundError:
-    st.error("Model artifacts not found. Please ensure all .pkl files are in the same directory.")
+    st.error("Model artifacts not found. Please ensure all 5 .pkl files are in the same directory as this app.")
     st.stop()
 except Exception as e:
     st.error(f"Error loading model artifacts: {e}")
@@ -117,19 +117,12 @@ def make_prediction(user_data):
         return None, None
 
     # 4. Apply Preprocessing Pipeline
-    # Imputers are used to maintain the pipeline structure, even if a single
-    # prediction has no NaNs.
     num_data_imputed = num_imputer.transform(num_data)
     cat_data_imputed = cat_imputer.transform(cat_data)
-    
-    # One-hot encode categorical data
     cat_data_encoded = ohe.transform(cat_data_imputed)
     
     # 5. Combine and Scale
-    # Hstack the numeric and encoded categorical data
     X_processed = np.hstack([num_data_imputed, cat_data_encoded])
-    
-    # Scale the data
     X_scaled = scaler.transform(X_processed)
     
     # 6. Make Prediction
@@ -221,3 +214,4 @@ if st.button("Predict Churn", type="primary", use_container_width=True):
         # Show a breakdown of the input data
         with st.expander("Show Customer Input Summary"):
             st.json(user_input)
+
