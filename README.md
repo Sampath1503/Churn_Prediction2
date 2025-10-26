@@ -1,4 +1,16 @@
-````markdown
+<p align="center">
+  <img src="assets/banner.png" alt="My Awesome Project Banner" width="800">
+</p>
+
+<p align="center">
+  <img src="https://img.shields.io/badge/Python-3.9%2B-blue?logo=python&logoColor=white" alt="Python">
+  <img src="https://img.shields.io/badge/Streamlit-App-red?logo=streamlit" alt="Streamlit">
+  <img src="https://img.shields.io/badge/Model-XGBoost-brightgreen?logo=xgboost" alt="XGBoost">
+  ...
+</p>
+
+# My Awesome Project Title
+...
 # 📡 Telecom Customer Churn Prediction using XGBoost
 
 A complete end-to-end **Machine Learning project** that predicts whether a telecom customer is likely to **churn (leave the service)** based on their usage patterns and plan details.  
@@ -7,7 +19,7 @@ The project includes **data preprocessing, feature engineering, model optimizati
 ---
 
 ## 🚀 Live Demo
-🔗 **Streamlit App:** [Click to Open App](https://YOUR-STREAMLIT-APP-URL)
+🔗 **Streamlit App:** [Click to Open App](https://churnprediction2-6samtgcybmbcw2c37ua9sp.streamlit.app/)
 
 ---
 
@@ -59,8 +71,7 @@ This project uses **XGBoost**, an advanced ensemble algorithm, combined with **S
    ```bash
    git clone https://github.com/YOUR-USERNAME/telecom-churn-prediction.git
    cd telecom-churn-prediction
-````
-
+   ```
 2. **Install dependencies**
 
    ```bash
