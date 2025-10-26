@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="assets/banner.png" alt="My Awesome Project Banner" width="800">
+  <img src="Telecom-Churn-Predictor/banner.png" alt="My Awesome Project Banner" width="800">
 </p>
 
 <p align="center">
