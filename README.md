@@ -1,4 +1,4 @@
-![Alt text for the image](path/to/your/image.png)
+![Alt text for the image](Banner.png)
 ...
 # 📡 Telecom Customer Churn Prediction using XGBoost
 
