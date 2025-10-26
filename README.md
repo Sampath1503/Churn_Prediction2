@@ -1,15 +1,4 @@
-<p align="center">
-  <img src="Telecom-Churn-Predictor/banner.png" alt="My Awesome Project Banner" width="800">
-</p>
-
-<p align="center">
-  <img src="https://img.shields.io/badge/Python-3.9%2B-blue?logo=python&logoColor=white" alt="Python">
-  <img src="https://img.shields.io/badge/Streamlit-App-red?logo=streamlit" alt="Streamlit">
-  <img src="https://img.shields.io/badge/Model-XGBoost-brightgreen?logo=xgboost" alt="XGBoost">
-  ...
-</p>
-
-# My Awesome Project Title
+![Alt text for the image](path/to/your/image.png)
 ...
 # 📡 Telecom Customer Churn Prediction using XGBoost
 
