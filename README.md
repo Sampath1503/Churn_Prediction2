@@ -1,6 +1,3 @@
----
-
-````markdown
 # 📡 Telecom Customer Churn Prediction using XGBoost
 
 A complete end-to-end **Machine Learning project** that predicts whether a telecom customer is likely to **churn (leave the service)** based on their usage patterns and plan details.  
