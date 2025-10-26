@@ -1,3 +1,4 @@
+````markdown
 # 📡 Telecom Customer Churn Prediction using XGBoost
 
 A complete end-to-end **Machine Learning project** that predicts whether a telecom customer is likely to **churn (leave the service)** based on their usage patterns and plan details.  
@@ -6,7 +7,7 @@ The project includes **data preprocessing, feature engineering, model optimizati
 ---
 
 ## 🚀 Live Demo
-🔗 **Streamlit App:** [Click to Open App]([https://YOUR-STREAMLIT-APP-URL](https://churnprediction2-6samtgcybmbcw2c37ua9sp.streamlit.app/))
+🔗 **Streamlit App:** [Click to Open App](https://YOUR-STREAMLIT-APP-URL)
 
 ---
 
@@ -58,10 +59,13 @@ This project uses **XGBoost**, an advanced ensemble algorithm, combined with **S
    ```bash
    git clone https://github.com/YOUR-USERNAME/telecom-churn-prediction.git
    cd telecom-churn-prediction
-  ```2. **Install dependencies**
-```bash
+````
+
+2. **Install dependencies**
+
+   ```bash
    pip install -r requirements.txt
-  ```
+   ```
 
 3. **Run the Streamlit app**
 
@@ -101,7 +105,7 @@ By deploying this churn prediction system:
 
 ## 🧑‍💻 Author
 
-**👨‍💻 Sampath Kumar Panthagani**
+**👨‍💻 Chintu**
 M.Sc. Computational Data Science — Acharya Nagarjuna University
 📧 *Add your email or LinkedIn link here if you’d like (optional)*
 
@@ -117,4 +121,11 @@ M.Sc. Computational Data Science — Acharya Nagarjuna University
 
 ⭐ **If you found this project helpful, consider giving it a star on GitHub!**
 
+```
+
+---
+
+Would you like me to:
+- fill in your **actual Streamlit Cloud URL** automatically once you share it, and  
+- polish this README with a **banner image + badges** (for Python, Streamlit, XGBoost, etc.) so it looks like a top GitHub project?
 ```
