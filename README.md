@@ -6,7 +6,7 @@ The project includes **data preprocessing, feature engineering, model optimizati
 ---
 
 ## 🚀 Live Demo
-🔗 **Streamlit App:** [Click to Open App](https://YOUR-STREAMLIT-APP-URL)
+🔗 **Streamlit App:** [Click to Open App]([https://YOUR-STREAMLIT-APP-URL](https://churnprediction2-6samtgcybmbcw2c37ua9sp.streamlit.app/))
 
 ---
 
@@ -58,13 +58,10 @@ This project uses **XGBoost**, an advanced ensemble algorithm, combined with **S
    ```bash
    git clone https://github.com/YOUR-USERNAME/telecom-churn-prediction.git
    cd telecom-churn-prediction
-````
-
-2. **Install dependencies**
-
-   ```bash
+  ```2. **Install dependencies**
+```bash
    pip install -r requirements.txt
-   ```
+  ```
 
 3. **Run the Streamlit app**
 
@@ -104,7 +101,7 @@ By deploying this churn prediction system:
 
 ## 🧑‍💻 Author
 
-**👨‍💻 Chintu**
+**👨‍💻 Sampath Kumar Panthagani**
 M.Sc. Computational Data Science — Acharya Nagarjuna University
 📧 *Add your email or LinkedIn link here if you’d like (optional)*
 
