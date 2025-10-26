@@ -4,6 +4,16 @@ import numpy as np
 import joblib
 
 # ---------------------------------
+# Page Configuration
+# ---------------------------------
+st.set_page_config(
+    page_title="Telecom Churn Predictor",
+    page_icon="📡",
+    layout="wide",
+    initial_sidebar_state="expanded"
+)
+
+# ---------------------------------
 # Custom Styling (Optional)
 # ---------------------------------
 st.markdown("""
@@ -22,15 +32,6 @@ st.markdown("""
     </style>
 """, unsafe_allow_html=True)
 
-# ---------------------------------
-# Page Configuration
-# ---------------------------------
-st.set_page_config(
-    page_title="Telecom Churn Predictor",
-    page_icon="📡",
-    layout="wide",
-    initial_sidebar_state="expanded"
-)
 
 # ---------------------------------
 # Load Artifacts
