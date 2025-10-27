@@ -1,4 +1,4 @@
-![Alt text for the image](Banner.png)
+![Welcome Banner](Banner.png)
 ...
 # 📡 Telecom Customer Churn Prediction using XGBoost
 
@@ -121,11 +121,4 @@ M.Sc. Computational Data Science — Acharya Nagarjuna University
 
 ⭐ **If you found this project helpful, consider giving it a star on GitHub!**
 
-```
-
----
-
-Would you like me to:
-- fill in your **actual Streamlit Cloud URL** automatically once you share it, and  
-- polish this README with a **banner image + badges** (for Python, Streamlit, XGBoost, etc.) so it looks like a top GitHub project?
 ```
