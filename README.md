@@ -105,9 +105,10 @@ By deploying this churn prediction system:
 
 ## 🧑‍💻 Author
 
-**👨‍💻 Chintu**
+**👨‍💻 Sampath Kumar Panthagani**
 M.Sc. Computational Data Science — Acharya Nagarjuna University
-📧 *Add your email or LinkedIn link here if you’d like (optional)*
+
+📧 *www.linkedin.com/in/sampath-kumar-panthagani-2147a6250*
 
 ---
 
@@ -120,5 +121,3 @@ M.Sc. Computational Data Science — Acharya Nagarjuna University
 ---
 
 ⭐ **If you found this project helpful, consider giving it a star on GitHub!**
-
-```
